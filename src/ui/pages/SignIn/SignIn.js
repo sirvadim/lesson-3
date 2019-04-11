@@ -10,45 +10,35 @@ const Wrapper = styled.div`
   padding: ${({ theme }) => theme.paddings.main}px;
 `
 
-export class SignIn extends React.Component {
-  state = {
-    value: '',
-  }
-
-  handleChange = value => {
-    this.setState({ value })
-  }
-
-  render() {
-    const { value, status, changeNumber, signIn } = this.props
-    return (
-      <PageTemplate>
-        <Header title="Ввод номера телефона" />
-        <Divider />
-        <Flex1>
-          <Wrapper>
-            <HBox height={9} />
-            <Body2>На указанный телефон будет выслан код подтверждения</Body2>
-            <HBox height={20} />
-            <TextField
-              label="Номер телефона"
-              startAdornment="+7"
-              placeholder="9XXXXXXXXX"
-              onChange={changeNumber}
-              value={value}
-            />
-          </Wrapper>
-          <RequestStatus status={status} loadingMessage="Телефон отправлется" successMessage="Номер успешно отправлен" failureMessage="Произошла неизвестная ошибка" />
-        </Flex1>
-        <Wrapper>
-          <ButtonAccent onPress={signIn}>
-            Отправить
-          </ButtonAccent>
-        </Wrapper>
-      </PageTemplate>
-    )
-  }
-}
+export const SignIn = ({ value, status, changeNumber, signIn }) => (
+  <PageTemplate>
+    <Header title="Ввод номера телефона" />
+    <Divider />
+    <Flex1>
+      <Wrapper>
+        <HBox height={9} />
+        <Body2>На указанный телефон будет выслан код подтверждения</Body2>
+        <HBox height={20} />
+        <TextField
+          label="Номер телефона"
+          startAdornment="+7"
+          placeholder="9XXXXXXXXX"
+          onChange={changeNumber}
+          value={value}
+        />
+      </Wrapper>
+      <RequestStatus
+        status={status}
+        loadingMessage="Телефон отправлется"
+        successMessage="Номер успешно отправлен"
+        failureMessage="Произошла неизвестная ошибка"
+      />
+    </Flex1>
+    <Wrapper>
+      <ButtonAccent onPress={signIn}>Отправить</ButtonAccent>
+    </Wrapper>
+  </PageTemplate>
+)
 
 SignIn.propTypes = {
   value: PropTypes.string.isRequired,
