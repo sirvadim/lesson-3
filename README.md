@@ -1,4 +1,4 @@
-# 2 занятие
+# 3 занятие
 
 ## Домашнее задание
 
@@ -18,16 +18,16 @@
 - можно использовать библиотеку react-roluter-modal для анимаций
 
 ### Ссылки:
-formik https://github.com/jaredpalmer/formik
+redux https://redux.js.org/
 
-yup https://github.com/jquense/yup
+redux-persist https://github.com/rt2zz/redux-persist
 
-redux-form https://redux-form.com/8.1.0/
+reselect https://github.com/reduxjs/reselect
 
-react-router-modal https://github.com/davidmfoley/react-router-modal
+connected-react-router https://github.com/supasate/connected-react-router
 
 ### Дедлайн
 
-Четверг, 12 апреля, 12:00 KGD
+Понедельник, 15 апреля, 12:00 KGD
 
 # Процесс выполнения
