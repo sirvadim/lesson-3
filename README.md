@@ -30,8 +30,13 @@ redux-saga https://redux-saga.js.org/
 # Процесс выполнения
 
 Декомпозиция
+
 redux-form 2 часа
+
 3 страница редакс 2 часа
+
 перевод валюты (api 1 час+реализовать 30 мин)
+
 redux-actions 30 мин
+
 DeliveryTime 1 час + 1 час
