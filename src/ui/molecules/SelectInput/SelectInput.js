@@ -10,7 +10,8 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   border-radius: 4px;
-  background-color: ${({ theme }) => theme.pallete.darkWhite};
+  background-color: ${({ theme, disabled }) =>
+    disabled ? theme.pallete.neroGray : theme.pallete.darkWhite};
   height: 40px;
   min-height: 40px;
   border: 1px
@@ -27,8 +28,18 @@ const ValueContainer = styled.div`
   justify-content: space-around;
 `
 
-export const SelectInput = ({ startAdornment, error, onPress, value }) => (
-  <Container error={error} onClick={onPress}>
+export const SelectInput = ({
+  startAdornment,
+  error,
+  onPress,
+  value,
+  disabled,
+}) => (
+  <Container
+    error={error}
+    disabled={disabled}
+    onClick={disabled ? null : onPress}
+  >
     {startAdornment ? (
       <FormAdornment>{startAdornment}</FormAdornment>
     ) : (
@@ -42,6 +53,7 @@ export const SelectInput = ({ startAdornment, error, onPress, value }) => (
 )
 
 SelectInput.propTypes = {
+  disabled: PropTypes.bool,
   startAdornment: PropTypes.node,
   error: PropTypes.string,
   value: PropTypes.string,

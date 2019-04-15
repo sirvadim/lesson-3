@@ -1,0 +1,10 @@
+export const CHANGE_CODE = 'exchange/CHANGE_CODE'
+export const RESET = 'exchange/RESET'
+
+export const START = 'exchange/START'
+export const DONE = 'exchange/DONE'
+export const FAILURE = 'exchange/FAILURE'
+export const SETFROM = 'exchange/SETFROM'
+export const SETTO = 'exchange/SETTO'
+export const SETRUB = 'exchange/SETRUB'
+export const SETGBP = 'exchange/SETGBP'

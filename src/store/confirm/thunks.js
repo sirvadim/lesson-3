@@ -13,7 +13,6 @@ export const confirmNumber = () => async (dispatch, getState) => {
     const code = getCodeValue(getState())
     const res = await fetch(
       `https://my-json-server.typicode.com/IgorAntonov/confirmation/code?${code}`,
-    
     )
     const { status } = await res.json()
     if (status === 'OK') {

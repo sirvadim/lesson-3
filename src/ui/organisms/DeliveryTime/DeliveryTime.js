@@ -19,6 +19,7 @@ const StyledText = styled.div`
 
 export const DeliveryTime = withTheme(
   ({
+    disabled,
     theme,
     fromValue,
     toValue,
@@ -29,11 +30,13 @@ export const DeliveryTime = withTheme(
     tip,
   }) => (
     <FieldContainer>
+      {console.log('disabled', disabled)}
       <FormLabel>Время доставки</FormLabel>
       <HBox height={theme.paddings.half} />
       <Row>
         <Flex1>
           <SelectInput
+            disabled={false}
             value={fromValue}
             onPress={fromAction}
             error={fromError}
@@ -45,6 +48,8 @@ export const DeliveryTime = withTheme(
         <VBox />
         <Flex1>
           <SelectInput
+            // disabled={true}
+            disabled={disabled}
             value={toValue}
             onPress={toAction}
             error={toError}
@@ -63,6 +68,7 @@ export const DeliveryTime = withTheme(
 )
 
 DeliveryTime.propTypes = {
+  disabled: PropTypes.bool,
   fromValue: PropTypes.string,
   fromAction: PropTypes.func.isRequired,
   fromError: PropTypes.string,
