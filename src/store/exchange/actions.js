@@ -1,49 +1,12 @@
 import * as types from './types'
+import { createAction } from 'redux-actions'
 
-export const changeCode = value => ({
-  type: types.CHANGE_CODE,
-  payload: {
-    value,
-  },
-})
-
-export const resetState = () => ({
-  type: types.RESET,
-})
-
-export const start = () => ({
-  type: types.START,
-})
-export const done = () => ({
-  type: types.DONE,
-})
-export const failure = () => ({
-  type: types.FAILURE,
-})
-
-export const setFrom = value => ({
-  type: types.SETFROM,
-  payload: {
-    value,
-  },
-})
-export const setTo = value => ({
-  type: types.SETTO,
-  payload: {
-    value,
-  },
-})
-
-export const setRub = value => ({
-  type: types.SETRUB,
-  payload: {
-    value,
-  },
-})
-
-export const setGbp = value => ({
-  type: types.SETGBP,
-  payload: {
-    value,
-  },
-})
+export const changeCode = createAction(types.CHANGE_CODE)
+export const resetState = createAction(types.RESET)
+export const start = createAction(types.START)
+export const done = createAction(types.DONE)
+export const failure = createAction(types.FAILURE)
+export const setFrom = createAction(types.SETFROM)
+export const setTo = createAction(types.SETTO)
+export const setRub = createAction(types.SETRUB)
+export const setGbp = createAction(types.SETGBP)

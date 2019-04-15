@@ -14,25 +14,24 @@ export const reducer = (state = initialState, action) => {
     case types.SETFROM:
       return {
         ...state,
-        fromValue: action.payload.value,
+        fromValue: action.payload,
       }
     case types.SETTO:
       return {
         ...state,
-        toValue: action.payload.value,
+        toValue: action.payload,
       }
     case types.SETRUB:
       return {
         ...state,
-        rub: action.payload.value,
+        rub: action.payload,
       }
     case types.SETGBP:
       return {
         ...state,
-        gbp: action.payload.value,
+        gbp: action.payload,
       }
     default:
-      console.log(state, action.type)
       return state
   }
 }
